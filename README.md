@@ -106,7 +106,7 @@ pip install -r requirements.txt
 sudo -u postgres psql
 
 # In psql:
-CREATE USER weather_user WITH PASSWORD 'weatherpass123';
+CREATE USER weather_user WITH PASSWORD 'your_secure_password';
 CREATE DATABASE weather_db OWNER weather_user;
 GRANT ALL PRIVILEGES ON DATABASE weather_db TO weather_user;
 \q
@@ -117,7 +117,7 @@ GRANT ALL PRIVILEGES ON DATABASE weather_db TO weather_user;
 Create a `.env` file in the project root:
 
 ```env
-DATABASE_URL=postgresql://weather_user:weatherpass123@localhost:5432/weather_db
+DATABASE_URL=postgresql://weather_user:your_password@localhost:5432/weather_db
 OPENWEATHER_API_KEY=your_api_key_here
 ```
 
@@ -143,8 +143,8 @@ The API will be available at: `http://127.0.0.1:8000`
 
 Example `.env` file:
 ```env
-DATABASE_URL=postgresql://weather_user:weatherpass123@localhost:5432/weather_db
-OPENWEATHER_API_KEY=bdb3acc2920ea360977b38890d951d41
+DATABASE_URL=postgresql://weather_user:your_password@localhost:5432/weather_db
+OPENWEATHER_API_KEY=your_api_key_here
 ```
 
 ## 📡 API Endpoints
